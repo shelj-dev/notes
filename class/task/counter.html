@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Counter</title>
+		<style>
+			div {
+				height: 100px;
+				width: 200px;
+				margin: 50px;
+				background-color: red;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: larger;
+				user-select: none;
+			}
+			div:active {
+				background-color: green;
+			}
+			body {
+				height: 95vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: black;
+				color: white;
+				font-size: 50px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="add">😎</div>
+		<h1 id="num">0</h1>
+		<div id="sub">🤨</div>
+		<script>
+			var number = 0;
+			const addBtn = document.getElementById("add");
+			const subBtn = document.getElementById("sub");
+			const num = document.getElementById("num");
+
+			// dblclick, mouseover, mouseout, mousedown, mouseup
+
+			addBtn.addEventListener("click", add);
+			subBtn.addEventListener("click", sub);
+
+			function add() {
+				number = number + 1;
+				num.textContent = number;
+			}
+
+			function sub() {
+				number = number - 1;
+				num.textContent = number;
+			}
+		</script>
+	</body>
+</html>
